@@ -1,5 +1,5 @@
 {% set name = "xdggs" %}
-{% set version = "0.2.1" %}
+{% set version = "0.2.2" %}
 {% set python_min = "3.11" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/xdggs-{{ version }}.tar.gz
-  sha256: 3cb7d4d15b276b4d411e12e9331db2ca9951903309f8a1cf54ce6ff17260cce0
+  sha256: 4b3aacb398e214e0b684b5e482aeebc0d37ecb0511b4a637354f475133896e1c
 
 build:
   noarch: python
@@ -18,9 +18,9 @@ build:
 requirements:
   host:
     - python {{ python_min }}
-    - setuptools >=61.0
-    - setuptools-scm >=6.2
     - pip
+    - hatchling
+    - hatch-vcs
   run:
     - python >={{ python_min }}
     - xarray
@@ -31,6 +31,7 @@ requirements:
     - pyproj >=3.3
     - matplotlib-base
     - arro3-core >=0.4.0
+    - healpix-geo >=0.0.6
     - pooch
 
 test:
