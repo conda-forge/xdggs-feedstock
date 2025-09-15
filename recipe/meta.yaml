@@ -31,6 +31,7 @@ requirements:
     - pyproj >=3.3
     - matplotlib-base
     - arro3-core >=0.4.0
+    - healpix-geo >=0.0.6
     - pooch
 
 test:
