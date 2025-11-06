@@ -24,6 +24,7 @@ requirements:
   run:
     - python >={{ python_min }}
     - xarray
+    - numpy>=2.0
     - cdshealpix
     - h3ronpy
     - typing_extensions
