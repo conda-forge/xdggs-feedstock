@@ -1,5 +1,5 @@
 {% set name = "xdggs" %}
-{% set version = "0.4.0" %}
+{% set version = "0.5.0" %}
 {% set python_min = "3.11" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/xdggs-{{ version }}.tar.gz
-  sha256: 93c9e29ce1515696b6ee1537eba8c3969b56ee496a24783be5ee9e2a2f44bbc2
+  sha256: 362761aff025951eaabe4c03038d6c28113252bb226984fb4227c360c3926f3c
 
 build:
   noarch: python
