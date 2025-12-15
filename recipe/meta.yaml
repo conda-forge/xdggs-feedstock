@@ -34,6 +34,9 @@ requirements:
     - arro3-core >=0.4.0
     - healpix-geo >=0.0.6
     - pooch
+    - anywidget
+    - traitlets
+    - ipywidgets
 
 test:
   imports:
