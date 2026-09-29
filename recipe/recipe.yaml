@@ -40,6 +40,7 @@ requirements:
 tests:
   - python:
       python_version:
+       - ${{ python_min }}.*
        - "*"
       imports:
         - xdggs
@@ -49,7 +50,7 @@ tests:
       pip_check: true
 
 about:
-  home: https://github.com/xarray-contrib/xdggs
+  homepage: https://github.com/xarray-contrib/xdggs
   summary: Xarray extension for DGGS
   description: |
     xdggs is an open-source Python package that provides tools for handling
