@@ -1,0 +1,68 @@
+context:
+  name: xdggs
+  version: "0.7.0"
+  python_min: "3.12"
+
+package:
+  name: ${{ name | lower }}
+  version: ${{ version }}
+
+source:
+  url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/xdggs-${{ version }}.tar.gz
+  sha256: f1bf585ca942cd288f8b732a8e33e3a5ea9e63ce8f824db4a08fc732423480ee
+
+build:
+  noarch: python
+  script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+  number: 0
+
+requirements:
+  host:
+    - python ${{ python_min }}.*
+    - pip
+    - hatchling
+    - hatch-vcs
+  run:
+    - python >=${{ python_min }}
+    - xarray
+    - numpy >=2.0
+    - h3ronpy
+    - lonboard >=0.9.3
+    - pyproj >=3.3
+    - matplotlib-base
+    - arro3-core >=0.4.0
+    - healpix-geo >=0.3.0
+    - pooch
+    - anywidget >=0.11
+    - traitlets
+    - pandas
+    - h5netcdf
+
+tests:
+  - python:
+      python_version:
+       - ${{ python_min }}.*
+       - "*"
+      imports:
+        - xdggs
+        - xdggs.plotting
+        - xdggs.conventions
+        - xdggs.healpix
+      # temporarily disable pip_check because of the upper-bound on anywidget in lonboard
+      pip_check: false
+
+about:
+  homepage: https://github.com/xarray-contrib/xdggs
+  summary: Xarray extension for DGGS
+  description: |
+    xdggs is an open-source Python package that provides tools for handling
+    geospatial data using Discrete Global Grid Systems (DGGS) with xarray.
+  license: Apache-2.0
+  license_file: LICENSE
+  documentation: https://xdggs.readthedocs.io/
+  repository: https://github.com/xarray-contrib/xdggs
+
+extra:
+  recipe-maintainers:
+    - keewis
+    - benbovy
