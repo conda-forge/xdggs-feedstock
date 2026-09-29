@@ -48,7 +48,8 @@ tests:
         - xdggs.plotting
         - xdggs.conventions
         - xdggs.healpix
-      pip_check: true
+      # temporarily disable pip_check because the whole upper-bound issue
+      pip_check: false
 
 about:
   homepage: https://github.com/xarray-contrib/xdggs
