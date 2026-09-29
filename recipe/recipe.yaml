@@ -48,7 +48,7 @@ tests:
         - xdggs.plotting
         - xdggs.conventions
         - xdggs.healpix
-      # temporarily disable pip_check because the whole upper-bound issue
+      # temporarily disable pip_check because of the upper-bound on anywidget in lonboard
       pip_check: false
 
 about:
