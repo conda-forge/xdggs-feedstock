@@ -9,6 +9,13 @@ Package license: Apache-2.0
 
 Summary: Xarray extension for DGGS
 
+Development: https://github.com/xarray-contrib/xdggs
+
+Documentation: https://xdggs.readthedocs.io/
+
+xdggs is an open-source Python package that provides tools for handling
+geospatial data using Discrete Global Grid Systems (DGGS) with xarray.
+
 Current build status
 ====================
 
