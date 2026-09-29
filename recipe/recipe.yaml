@@ -1,13 +1,13 @@
-{% set name = "xdggs" %}
-{% set version = "0.7.0" %}
-{% set python_min = "3.11" %}
+context:
+  name: xdggs
+  version: "0.7.0"
 
 package:
-  name: {{ name|lower }}
-  version: {{ version }}
+  name: ${{ name | lower }}
+  version: ${{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/xdggs-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/xdggs-${{ version }}.tar.gz
   sha256: f1bf585ca942cd288f8b732a8e33e3a5ea9e63ce8f824db4a08fc732423480ee
 
 build:
@@ -50,8 +50,13 @@ test:
 about:
   home: https://github.com/xarray-contrib/xdggs
   summary: Xarray extension for DGGS
+  description: |
+    xdggs is an open-source Python package that provides tools for handling
+    geospatial data using Discrete Global Grid Systems (DGGS) with xarray.
   license: Apache-2.0
   license_file: LICENSE
+  documentation: https://xdggs.readthedocs.io/
+  repository: https://github.com/xarray-contrib/xdggs
 
 extra:
   recipe-maintainers:
